@@ -24,6 +24,7 @@
     + [8. Identification of Empty Droplets](#8-identification-of-empty-droplets)
     + [9. Outputs](#9-outputs)
 - [Versioning](#versioning)
+- [FAQs](#faqs)
 - [Pipeline Improvements](#have-suggestions)
 
 # Optimus Pipeline Overview
@@ -201,6 +202,13 @@ All final Zarr and Loom outputs contain the unnormalized (unfiltered), UMI-corre
 # Versioning
 
 All Optimus pipeline releases are documented in the [Optimus changelog](Optimus.changelog.md). 
+
+# FAQs
+## Can I run Optimus in Terra?
+Yes! We have Terra workspace that is preconfigured with the latest Optimus workflow and is preloaded with human and mouse sample data. You can access the workspace at [https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline](https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline). You will need a Google Account to set up Terra. Please see [Terra Support](https://support.terra.bio/hc/en-us) for documents on getting start.
+
+## Is the output count matrix filtered or normalized?
+No, we do not filter. We keep as much data as possible so that the researcher can make their own filtering and normalization choices. We do, however, output some information that may be helpful for filtering, like UMI counts per cell and calls on whether or not a cell is empty from EmptyDrops software. For the EmptyDrops call, a cell will be flagged as possibly empty if it contains fewer than 100 molecules.
 
 # Have Suggestions? 
 
